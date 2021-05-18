@@ -29,6 +29,10 @@ export default styled(function App() {
       setIsLoading(false);
     });
   }, []);
+  
+  useEffect(() => {
+    document.title = isLoading ? '...!' : pokemon.name;
+  }, [pokemon, isLoading]);
 
   return (
     <div className="App">
