@@ -31,7 +31,7 @@ export default styled(function App() {
   }, []);
   
   useEffect(() => {
-    document.title = isLoading ? '...!' : pokemon.name;
+    document.title = isLoading ? '...!' : `${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)}`;
   }, [pokemon, isLoading]);
 
   return (
